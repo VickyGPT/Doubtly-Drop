@@ -138,13 +138,13 @@ class PeersUI {
 
             if (files.length === 1) {
                 descriptor = files[0].name;
-                noPeersMessage = `Open PairDrop on other devices to send<br><i>${descriptor}</i>`;
+                noPeersMessage = `Open ArtDrop on other devices to send<br><i>${descriptor}</i>`;
             } else if (files.length > 1) {
                 descriptor = `${files[0].name} and ${files.length-1} other files`;
-                noPeersMessage = `Open PairDrop on other devices to send<br>${descriptor}`;
+                noPeersMessage = `Open ArtDrop on other devices to send<br>${descriptor}`;
             } else {
                 descriptor = "pasted text";
-                noPeersMessage = `Open PairDrop on other devices to send<br>${descriptor}`;
+                noPeersMessage = `Open ArtDrop on other devices to send<br>${descriptor}`;
             }
 
             this.$xInstructions.querySelector('p').innerHTML = `<i>${descriptor}</i>`;
@@ -184,7 +184,7 @@ class PeersUI {
             this.$xInstructions.setAttribute('desktop', 'Click to send files or right click to send a message');
             this.$xInstructions.setAttribute('mobile', 'Tap to send files or long tap to send a message');
 
-            this.$xNoPeers.querySelector('h2').innerHTML = 'Open PairDrop on other devices to send files';
+            this.$xNoPeers.querySelector('h2').innerHTML = 'Open ArtDrop on other devices to send files';
 
             this.$cancelPasteModeBtn.setAttribute('hidden', "");
 
@@ -430,7 +430,7 @@ class Dialog {
             document.activeElement.blur();
             window.blur();
         }
-        document.title = 'PairDrop';
+        document.title = 'ArtDrop';
         document.changeFavicon("images/favicon-96x96.png");
     }
 
@@ -546,10 +546,10 @@ class ReceiveFileDialog extends ReceiveDialog {
 
         if (files.length === 1) {
             url = URL.createObjectURL(files[0])
-            title = `PairDrop - ${descriptor} Received`
+            title = `ArtDrop - ${descriptor} Received`
             filenameDownload = files[0].name;
         } else {
-            title = `PairDrop - ${files.length} ${descriptor}s Received`
+            title = `ArtDrop - ${files.length} ${descriptor}s Received`
             description += ` and ${files.length-1} other ${descriptor.toLowerCase()}`;
             if(files.length>2) description += "s";
 
@@ -603,7 +603,7 @@ class ReceiveFileDialog extends ReceiveDialog {
         }
 
         this.createPreviewElement(files[0]).finally(_ => {
-            document.title = `PairDrop - ${files.length} Files received`;
+            document.title = `ArtDrop - ${files.length} Files received`;
             document.changeFavicon("images/favicon-96x96-notification.png");
             this.show();
             Events.fire('set-progress', {peerId: peerId, progress: 1, status: 'process'})
@@ -686,7 +686,7 @@ class ReceiveRequestDialog extends ReceiveDialog {
             this.$previewBox.appendChild(element)
         }
 
-        document.title = 'PairDrop - File Transfer Requested';
+        document.title = 'ArtDrop - File Transfer Requested';
         document.changeFavicon("images/favicon-96x96-notification.png");
         this.show();
     }
@@ -1061,7 +1061,7 @@ class ReceiveTextDialog extends Dialog {
         } else {
             this.$text.textContent = text;
         }
-        document.title = 'PairDrop - Message Received';
+        document.title = 'ArtDrop - Message Received';
         document.changeFavicon("images/favicon-96x96-notification.png");
         this.show();
     }
@@ -1575,7 +1575,7 @@ class PersistentStorage {
     }
 }
 
-class PairDrop {
+class ArtDrop {
     constructor() {
         Events.on('load', _ => {
             const server = new ServerConnection();
@@ -1599,7 +1599,7 @@ class PairDrop {
 }
 
 const persistentStorage = new PersistentStorage();
-const pairDrop = new PairDrop();
+const pairDrop = new ArtDrop();
 
 
 if ('serviceWorker' in navigator) {
@@ -1703,7 +1703,7 @@ document.changeFavicon = function (src) {
     document.querySelector('[rel="shortcut icon"]').href = src;
 }
 
-// close About PairDrop page on Escape
+// close About ArtDrop page on Escape
 window.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
         window.location.hash = '#';

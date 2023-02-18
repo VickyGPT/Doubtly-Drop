@@ -1,24 +1,30 @@
 <div align="center">
-  <a href="https://github.com/schlagmichdoch/PairDrop">
-    <img src="https://raw.githubusercontent.com/schlagmichdoch/PairDrop/master/public/images/android-chrome-512x512.png" alt="Logo"  width="150" height="150">
+  <a href="https://github.com/artslabcreatives/ArtDrop">
+    <img src="https://raw.githubusercontent.com/artslabcreatives/ArtDrop/master/public/images/android-chrome-512x512.png" alt="Logo"  width="150" height="150">
   </a>
- 
-  <h1>PairDrop</h1>
+
+<p align="center"><a href="https://artslabcreatives.com" target="_blank"><img src="https://artslabcreatives.com/wp-content/uploads/2020/04/Dark-1-e1586270633179.png" width="400"></a></p>
+
+## About Artslab Creatives
+
+We are a digital media agency that believes, through proper strategy formulation, the right amount of creativity and innovation, a brand can truly come to life, communicate and create bonds at an emotional level with their target audience.
+
+  <h1>ArtDrop</h1>
 
   <p>
     Local file sharing in your browser. Inspired by Apple's Airdrop.
     <br />
-    <a href="https://pairdrop.net"><strong>Explore  »</strong></a>
+    <a href="https://drop.artslabcreatives.com"><strong>Explore  »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/schlagmichdoch/PairDrop/issues">Report Bug</a>
+    <a href="https://github.com/artslabcreatives/ArtDrop/issues">Report Bug</a>
     ·
-    <a href="https://github.com/schlagmichdoch/PairDrop/issues">Request Feature</a>
+    <a href="https://github.com/artslabcreatives/ArtDrop/issues">Request Feature</a>
   </p>
 </div>
 
 ## Features
-[PairDrop](https://pairdrop.net) is a sublime alternative to AirDrop that works on all platforms.
+[ArtDrop](https://drop.artslabcreatives.com) is a sublime alternative to AirDrop that works on all platforms.
 
 Send images, documents or text via peer to peer connection to devices in the same local network/Wi-Fi or to paired devices.
 As it is web based, it runs on all devices.
@@ -27,7 +33,7 @@ You want to quickly send a file from your phone to your laptop?
 <br>You want to share photos in original quality with friends that use a mixture of Android and iOS?
 <br>You want to share private files peer to peer between Linux systems?
 <br>AirDrop is unreliable again?
-<br>_Send it with PairDrop!_
+<br>_Send it with ArtDrop!_
 
 Developed based on [Snapdrop](https://github.com/RobinLinus/snapdrop)
 
@@ -56,13 +62,13 @@ Developed based on [Snapdrop](https://github.com/RobinLinus/snapdrop)
 ### Other changes
 * [Paste Mode](https://github.com/RobinLinus/snapdrop/pull/534)
 * [Prevent devices from sleeping on file transfer](https://github.com/RobinLinus/snapdrop/pull/413)
-* Warn user before PairDrop is closed on file transfer  
-* Open PairDrop on multiple tabs simultaneously (Thanks [@willstott101](https://github.com/willstott101))
+* Warn user before ArtDrop is closed on file transfer  
+* Open ArtDrop on multiple tabs simultaneously (Thanks [@willstott101](https://github.com/willstott101))
 * [Video and Audio preview](https://github.com/RobinLinus/snapdrop/pull/455) (Thanks [@victorwads](https://github.com/victorwads))
 * Node-only implementation (Thanks [@Bellisario](https://github.com/Bellisario))
 * Automatic restart on error (Thanks [@KaKi87](https://github.com/KaKi87))
 * Lots of stability fixes (Thanks [@MWY001](https://github.com/MWY001) [@skiby7](https://github.com/skiby7) and [@willstott101](https://github.com/willstott101))
-* To host PairDrop on your local network (e.g. on Raspberry Pi): [All peers connected with private IPs are discoverable by each other](https://github.com/RobinLinus/snapdrop/pull/558)
+* To host ArtDrop on your local network (e.g. on Raspberry Pi): [All peers connected with private IPs are discoverable by each other](https://github.com/RobinLinus/snapdrop/pull/558)
 
 ## Screenshots
 <div align="center">
@@ -71,7 +77,7 @@ Developed based on [Snapdrop](https://github.com/RobinLinus/snapdrop)
 
 </div>
 
-## PairDrop is built with the following awesome technologies:
+## ArtDrop is built with the following awesome technologies:
 * Vanilla HTML5 / ES6 / CSS3 frontend
 * [WebRTC](http://webrtc.org/) / [WebSockets](http://www.websocket.org/)
 * [NodeJS](https://nodejs.org/en/) backend
@@ -85,10 +91,10 @@ You can [host your own instance with Docker](/docs/host-your-own.md).
 
 
 ## Support the Community
-PairDrop is free and always will be. Still, we have to pay for the domain.
+ArtDrop is free and always will be. Still, we have to pay for the domain.
 
 To contribute and support me:<br>
-<a href="https://www.buymeacoffee.com/pairdrop" target="_blank">
+<a href="https://www.buymeacoffee.com/artdrop" target="_blank">
 <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" >
 </a>
 
@@ -98,6 +104,6 @@ To support the original Snapdrop and its creator go to [his GitHub page](https:/
 
 ## How to contribute
 
-Feel free to [open an issue](https://github.com/schlagmichdoch/pairdrop/issues/new/choose) or a
-[pull request](https://github.com/schlagmichdoch/pairdrop/pulls) but follow
+Feel free to [open an issue](https://github.com/artslabcreatives/artdrop/issues/new/choose) or a
+[pull request](https://github.com/artslabcreatives/artdrop/pulls) but follow
 [Contributing Guidelines](/CONTRIBUTING.md).

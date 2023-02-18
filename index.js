@@ -106,7 +106,7 @@ class PairDropServer {
         this._rooms = {};
         this._roomSecrets = {};
 
-        console.log('PairDrop is running on port', port);
+        console.log('ArtDrop is running on port', port);
     }
 
     _onConnection(peer) {

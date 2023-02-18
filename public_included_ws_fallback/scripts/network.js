@@ -801,7 +801,7 @@ class PeersManager {
             console.log('WSPeer left:', msg.peerId)
             Events.fire('peer-disconnected', msg.peerId)
         } else if (msg.disconnect === true) {
-            // if user actively disconnected from PairDrop server, disconnect all peer to peer connections immediately
+            // if user actively disconnected from ArtDrop server, disconnect all peer to peer connections immediately
             Events.fire('peer-disconnected', msg.peerId);
         }
     }

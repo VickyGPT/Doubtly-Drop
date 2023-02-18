@@ -11,8 +11,8 @@
 * [Producthunt](https://www.producthunt.com/posts/snapdrop)
 
 ### Help! I can't install the PWA!
-if you are using a Chromium-based browser (Chrome, Edge, Brave, etc.), you can easily install PairDrop PWA on your desktop 
-by clicking the install-button in the top-right corner while on [pairdrop.net](https://pairdrop.net).
+if you are using a Chromium-based browser (Chrome, Edge, Brave, etc.), you can easily install ArtDrop PWA on your desktop 
+by clicking the install-button in the top-right corner while on [drop.artslabcreatives.com](https://drop.artslabcreatives.com).
 
 <img src="pwa-install.png" alt="Example on how to install a pwa with Edge">
 
@@ -45,7 +45,7 @@ It uses a P2P connection if WebRTC is supported by the browser. WebRTC needs a S
 If your devices are paired and behind a NAT, the public TURN Server from [Open Relay](https://www.metered.ca/tools/openrelay/) is used to route your files and messages.
 
 ### What about privacy? Will files be saved on third-party-servers?
-None of your files are ever sent to any server. Files are sent only between peers. PairDrop doesn't even use a database. If you are curious have a look [at the Server](https://github.com/schlagmichdoch/pairdrop/blob/master/index.js).
+None of your files are ever sent to any server. Files are sent only between peers. ArtDrop doesn't even use a database. If you are curious have a look [at the Server](https://github.com/artslabcreatives/artdrop/blob/master/index.js).
 WebRTC encrypts the files on transit.
 
 If your devices are paired and behind a NAT, the public TURN Server from [Open Relay](https://www.metered.ca/tools/openrelay/) is used to route your files and messages.
@@ -65,16 +65,16 @@ You can also use mobile hotspots on phones to do that.
 Then, all data should be sent directly between devices and your data plan should not be charged.
 
 ### Why don't you implement feature xyz?
-Snapdrop and PairDrop are a study in radical simplicity. The user interface is insanely simple. Features are chosen very carefully because complexity grows quadratically since every feature potentially interferes with each other feature. We focus very narrowly on a single use case: instant file transfer. 
+Snapdrop and ArtDrop are a study in radical simplicity. The user interface is insanely simple. Features are chosen very carefully because complexity grows quadratically since every feature potentially interferes with each other feature. We focus very narrowly on a single use case: instant file transfer. 
 We are not trying to optimize for some edge-cases. We are optimizing the user flow of the average users. Don't be sad if we decline your feature request for the sake of simplicity. 
 
 If you want to learn more about simplicity you can read [Insanely Simple: The Obsession that Drives Apple's Success](https://www.amazon.com/Insanely-Simple-Ken-Segall-audiobook/dp/B007Z9686O) or [Thinking, Fast and Slow](https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555).
 
 
-### Snapdrop and PairDrop are awesome! How can I support them? 
-* [Buy me a cover to support open source software](https://www.buymeacoffee.com/pairdrop)
-* [File bugs, give feedback, submit suggestions](https://github.com/schlagmichdoch/pairdrop/issues)
-* Share PairDrop on social media.
+### Snapdrop and ArtDrop are awesome! How can I support them? 
+* [Buy me a cover to support open source software](https://www.buymeacoffee.com/artdrop)
+* [File bugs, give feedback, submit suggestions](https://github.com/artslabcreatives/artdrop/issues)
+* Share ArtDrop on social media.
 * Fix bugs and make a pull request. 
 * Do security analysis and suggestions
 

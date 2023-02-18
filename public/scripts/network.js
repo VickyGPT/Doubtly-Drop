@@ -1,7 +1,7 @@
 window.URL = window.URL || window.webkitURL;
 window.isRtcSupported = !!(window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection);
 
-if (!window.isRtcSupported) alert("WebRTC must be enabled for PairDrop to work");
+if (!window.isRtcSupported) alert("WebRTC must be enabled for ArtDrop to work");
 
 class ServerConnection {
 
@@ -734,7 +734,7 @@ class PeersManager {
 
     _onPeerLeft(msg) {
         if (msg.disconnect === true) {
-            // if user actively disconnected from PairDrop disconnect all peer to peer connections immediately
+            // if user actively disconnected from ArtDrop disconnect all peer to peer connections immediately
             Events.fire('peer-disconnected', msg.peerId);
         }
     }

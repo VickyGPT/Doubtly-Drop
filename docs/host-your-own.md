@@ -3,7 +3,7 @@
 ## Deployment with node
 
 ```bash
-git clone https://github.com/schlagmichdoch/PairDrop.git && cd PairDrop
+git clone https://github.com/artslabcreatives/ArtDrop.git && cd ArtDrop
 ```
 
 Install all dependencies with NPM:
@@ -38,7 +38,7 @@ On Windows
 ```bash
 $env:PORT=3010; npm start 
 ```
-> Specify the port PairDrop is running on. (Default: 3000)
+> Specify the port ArtDrop is running on. (Default: 3000)
 
 ### Options / Flags
 #### Local Run
@@ -47,9 +47,9 @@ npm start -- --localhost-only
 ```
 > Only allow connections from localhost.
 > 
-> Use this when deploying PairDrop with node. 
+> Use this when deploying ArtDrop with node. 
 > This prevents connections to the node server from bypassing the proxy server, 
-> as you must use a server proxy to point to PairDrop (See [#HTTP-Server](#http-server)).
+> as you must use a server proxy to point to ArtDrop (See [#HTTP-Server](#http-server)).
 
 #### Automatic restart on error
 ```bash
@@ -71,9 +71,9 @@ npm start -- --rate-limit
 ```bash
 npm start -- --include-ws-fallback
 ```
-> Provides PairDrop to clients with an included websocket fallback if the peer to peer WebRTC connection is not available to the client.
+> Provides ArtDrop to clients with an included websocket fallback if the peer to peer WebRTC connection is not available to the client.
 >
-> This is not used on the official https://pairdrop.net, but you can activate it on your self-hosted instance using this option.
+> This is not used on the official https://drop.artslabcreatives.com, but you can activate it on your self-hosted instance using this option.
 > This is especially useful if you connect to your instance via a VPN as most VPN services block WebRTC completely in order to hide your real IP address ([read more](https://privacysavvy.com/security/safe-browsing/disable-webrtc-chrome-firefox-safari-opera-edge/)).
 > 
 > **Warning:** All traffic sent between devices using this fallback is routed through the server and therefor not peer to peer!
@@ -95,11 +95,11 @@ npm run start:prod -- --localhost-only --include-ws-fallback
 > To prevent connections to the node server from bypassing the proxy server you should use "--localhost-only" on production.
 
 ## Deployment with Docker
-The easiest way to get PairDrop up and running is by using Docker.
+The easiest way to get ArtDrop up and running is by using Docker.
 
 ### Build the image
 ```bash
-docker build --pull . -f Dockerfile -t pairdrop
+docker build --pull . -f Dockerfile -t artdrop
 ```
 > A GitHub action is set up to do this step automatically.
 > 
@@ -107,17 +107,17 @@ docker build --pull . -f Dockerfile -t pairdrop
 
 ### Run the image
 ```bash
-docker run -p 127.0.0.1:3000:3000 -it pairdrop npm run start:prod
+docker run -p 127.0.0.1:3000:3000 -it artdrop npm run start:prod
 ```
-> By default, PairDrop is started with auto-start and rate-limit enabled.
+> By default, ArtDrop is started with auto-start and rate-limit enabled.
 > By including "127.0.0.1" the docker container is only available on localhost (same as "--localhost-only" when deploying with node).
 > 
-> You must use a server proxy to point to PairDrop (See [#HTTP-Server](#http-server)). 
+> You must use a server proxy to point to ArtDrop (See [#HTTP-Server](#http-server)). 
 >
 > To specify options replace `npm run start:prod` according to [the documentation above.](#options--flags)
 
 ## HTTP-Server
-When running PairDrop, the `X-Forwarded-For` header has to be set by a proxy. Otherwise, all clients will be mutually visible.
+When running ArtDrop, the `X-Forwarded-For` header has to be set by a proxy. Otherwise, all clients will be mutually visible.
 
 ### Using nginx
 #### Allow http and https requests
@@ -138,8 +138,8 @@ server {
 
 server {
     listen       443 ssl http2;
-    ssl_certificate /etc/ssl/certs/pairdrop-dev.crt;
-    ssl_certificate_key /etc/ssl/certs/pairdrop-dev.key;
+    ssl_certificate /etc/ssl/certs/artdrop-dev.crt;
+    ssl_certificate_key /etc/ssl/certs/artdrop-dev.key;
 
     expires epoch;
 
@@ -167,8 +167,8 @@ server {
 
 server {
     listen       443 ssl http2;
-    ssl_certificate /etc/ssl/certs/pairdrop-dev.crt;
-    ssl_certificate_key /etc/ssl/certs/pairdrop-dev.key;
+    ssl_certificate /etc/ssl/certs/artdrop-dev.crt;
+    ssl_certificate_key /etc/ssl/certs/artdrop-dev.key;
 
     expires epoch;
 
@@ -198,7 +198,7 @@ a2enmod proxy_wstunnel
 
 Create a new configuration file under `/etc/apache2/sites-available` (on debian)
 
-**pairdrop.conf**
+**artdrop.conf**
 #### Allow http and https requests
 ```
 <VirtualHost *:80>	
@@ -231,7 +231,7 @@ Create a new configuration file under `/etc/apache2/sites-available` (on debian)
 ```
 Activate the new virtual host and reload apache:
 ```shell
-a2ensite pairdrop
+a2ensite artdrop
 ```
 ```shell
 service apache2 reload
@@ -245,9 +245,9 @@ First, [Install docker with docker-compose.](https://docs.docker.com/compose/ins
 
 Then, clone the repository and run docker-compose:
 ```shell
-    git clone https://github.com/schlagmichdoch/PairDrop.git
+    git clone https://github.com/artslabcreatives/ArtDrop.git
 
-    cd PairDrop
+    cd ArtDrop
 
     git checkout dev
     

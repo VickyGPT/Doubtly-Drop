@@ -1,5 +1,5 @@
 const cacheVersion = 'v10';
-const cacheTitle = `pairdrop-cache-${cacheVersion}`;
+const cacheTitle = `artdrop-cache-${cacheVersion}`;
 const urlsToCache = [
     'index.html',
     './',

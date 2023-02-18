@@ -1,25 +1,25 @@
 # How-To
 ## Share files directly from context menu on Windows
-### Registering to open files with PairDrop
+### Registering to open files with ArtDrop
 The [File Handling API](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/handle-files) is implemented
 
 This is still experimental and must be enabled via a flag **before** the PWA is installed to Windows.
 1. [Enabled feature in Edge](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/handle-files#enable-the-file-handling-api)
-2. Install PairDrop by visiting https://pairdrop.net/ with the Edge browser and install it as described [here](faq.md#help--i-cant-install-the-pwa-).
-3. You are done! You can now send most files one at a time via PairDrop:
+2. Install ArtDrop by visiting https://drop.artslabcreatives.com/ with the Edge browser and install it as described [here](faq.md#help--i-cant-install-the-pwa-).
+3. You are done! You can now send most files one at a time via ArtDrop:
    
    _context menu > Open with > PairDrop_
 
 [//]: # (Todo: add screenshots)
 
-### Sending multiple files to PairDrop
-Outstandingly, it is also possible to send multiple files to PairDrop via the context menu by adding PairDrop to the `Send to` menu:
-1. [Register PairDrop as file handler](#registering-to-open-files-with-pairdrop) 
+### Sending multiple files to ArtDrop
+Outstandingly, it is also possible to send multiple files to ArtDrop via the context menu by adding ArtDrop to the `Send to` menu:
+1. [Register ArtDrop as file handler](#registering-to-open-files-with-artdrop) 
 2. Hit Windows Key+R, type: `shell:programs` and hit Enter.
-3. Copy the PairDrop shortcut from the directory
+3. Copy the ArtDrop shortcut from the directory
 4. Hit Windows Key+R, type: `shell:sendto` and hit Enter.
 5. Paste the copied shortcut into the directory
-6. You are done! You can now send multiple files (but no directories) directly via PairDrop:
+6. You are done! You can now send multiple files (but no directories) directly via ArtDrop:
    
    _context menu > Send to > PairDrop_
 

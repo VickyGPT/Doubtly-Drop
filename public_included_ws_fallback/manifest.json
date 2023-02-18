@@ -1,6 +1,6 @@
 {
-    "name": "PairDrop",
-    "short_name": "PairDrop",
+    "name": "ArtDrop",
+    "short_name": "ArtDrop",
     "icons": [{
             "src": "images/android-chrome-192x192.png",
             "sizes": "192x192",

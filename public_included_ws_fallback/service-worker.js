@@ -1,5 +1,5 @@
 const cacheVersion = 'v10';
-const cacheTitle = `pairdrop-included-ws-fallback-cache-${cacheVersion}`;
+const cacheTitle = `artdrop-included-ws-fallback-cache-${cacheVersion}`;
 const urlsToCache = [
     'index.html',
     './',
