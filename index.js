@@ -557,13 +557,13 @@ class Peer {
         if(!deviceName)
             deviceName = 'Unknown Device';
 
-        const displayName = uniqueNamesGenerator({
+        const displayName = 'Artslab'; /*uniqueNamesGenerator({
             length: 2,
             separator: ' ',
             dictionaries: [colors, animals],
             style: 'capital',
             seed: this.id.hashCode()
-        })
+        })*/
 
         this.name = {
             model: ua.device.model,
