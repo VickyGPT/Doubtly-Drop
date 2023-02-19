@@ -2,8 +2,8 @@
 
 :root {
     --icon-size: 24px;
-    --primary-color: #4285f4;
-    --paired-device-color: #00a69c;
+    --primary-color: #f44242;
+    --paired-device-color: #a68d00;
     --peer-width: 120px;
     color-scheme: light dark;
 }

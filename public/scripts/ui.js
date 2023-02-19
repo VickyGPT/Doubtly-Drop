@@ -69,7 +69,7 @@ class PeersUI {
     }
 
     _redrawPeer(peer) {
-        const peerNode = $(peer.id);
+        const peerNode = $(peer.id);displayName
         if (!peerNode) return;
         peerNode.classList.remove('type-ip', 'type-secret');
         peerNode.classList.add(`type-${peer.roomType}`)
