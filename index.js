@@ -557,13 +557,63 @@ class Peer {
         if(!deviceName)
             deviceName = 'Unknown Device';
 
-        const displayName = 'Artslab'; /*uniqueNamesGenerator({
+            const starTrekSpecies = [
+                'Andorian',
+                'Bajoran',
+                'Betazoid',
+                'Bolian',
+                'Cardassian',
+                'Denobulan',
+                'Ferengi',
+                'Gorn',
+                'Hirogen',
+                'Jem Hadar',
+                'Kazon',
+                'Klingon',
+                'Nausicaan',
+                'Orion',
+                'Q Continuum',
+                'Romulan',
+                'Suliban',
+                'Talaxian',
+                'Tholian',
+                'Trill',
+                'Vulcan',
+                'Xindi',
+                'Yridian',
+                'Zakdorn'
+              ];              
+
+        const shadesOfRed = [
+            'Crimson',
+            'Scarlet',
+            'Ruby',
+            'Cherry',
+            'Burgundy',
+            'Mahogany',
+            'Garnet',
+            'Carmine',
+            'Wine',
+            'Brick',
+            'Magenta',
+            'Rose',
+            'Maroon',
+            'Rust',
+            'Coral',
+            'Tomato',
+            'Raspberry',
+            'Claret',
+            'Brick Red',
+            'Fire Engine Red'
+          ];
+
+        const displayName = uniqueNamesGenerator({
             length: 2,
             separator: ' ',
-            dictionaries: [colors, animals],
+            dictionaries: [shadesOfRed, starTrekSpecies],
             style: 'capital',
             seed: this.id.hashCode()
-        })*/
+        })
 
         this.name = {
             model: ua.device.model,
