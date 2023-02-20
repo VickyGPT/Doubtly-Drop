@@ -582,47 +582,74 @@ class Peer {
                 'Xindi',
                 'Yridian',
                 'Zakdorn'
-              ];              
+              ];
 
-        const shadesOfRed = [
-            'Crimson',
-            'Scarlet',
-            'Ruby',
-            'Cherry',
-            'Burgundy',
-            'Mahogany',
-            'Garnet',
-            'Carmine',
-            'Wine',
-            'Brick',
-            'Magenta',
-            'Rose',
-            'Maroon',
-            'Rust',
-            'Coral',
-            'Tomato',
-            'Raspberry',
-            'Claret',
-            'Brick Red',
-            'Fire Engine Red'
-          ];
+            const middleEarthSpecies = [
+                "Elf",
+                "Dwarf",
+                "Hobbit",
+                "Orc",
+                "Ent",
+                "Goblin",
+                "Troll",
+                "Uruk-hai",
+                "Balrog",
+                "Dragon",
+                "Maiar",
+                "Men",
+                "Ainur",
+                "Warg",
+                "Nazgul",
+                "Skin-changer",
+                "Entwife",
+                "Dunedain",
+                "Beorning",
+                "Giant",
+                "Istari",
+                "Drúedain",
+                "Hound of Valinor",
+                "Eagle"
+              ];
 
-        const displayName = uniqueNamesGenerator({
-            length: 2,
-            separator: ' ',
-            dictionaries: [shadesOfRed, starTrekSpecies],
-            style: 'capital',
-            seed: this.id.hashCode()
-        })
+            const shadesOfRed = [
+                'Crimson',
+                'Scarlet',
+                'Ruby',
+                'Cherry',
+                'Burgundy',
+                'Mahogany',
+                'Garnet',
+                'Carmine',
+                'Wine',
+                'Brick',
+                'Magenta',
+                'Rose',
+                'Maroon',
+                'Rust',
+                'Coral',
+                'Tomato',
+                'Raspberry',
+                'Claret',
+                'Brick Red',
+                'Fire Engine Red'
+            ];
 
-        this.name = {
-            model: ua.device.model,
-            os: ua.os.name,
-            browser: ua.browser.name,
-            type: ua.device.type,
-            deviceName,
-            displayName
-        };
+            const displayName = uniqueNamesGenerator({
+                length: 2,
+                separator: ' ',
+                dictionaries: [shadesOfRed, middleEarthSpecies],
+                style: 'capital',
+                seed: this.id.hashCode()
+            })
+
+            this.name = {
+                model: ua.device.model,
+                os: ua.os.name,
+                browser: ua.browser.name,
+                type: ua.device.type,
+                deviceName,
+                displayName
+            };
     }
 
     getInfo() {
