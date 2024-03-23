@@ -138,13 +138,13 @@ class PeersUI {
 
             if (files.length === 1) {
                 descriptor = files[0].name;
-                noPeersMessage = `Open PairDrop on other devices to send<br><i>${descriptor}</i>`;
+                noPeersMessage = `Open Drop - Doubtly on other devices to send<br><i>${descriptor}</i>`;
             } else if (files.length > 1) {
                 descriptor = `${files[0].name} and ${files.length-1} other files`;
-                noPeersMessage = `Open PairDrop on other devices to send<br>${descriptor}`;
+                noPeersMessage = `Open Drop - Doubtly on other devices to send<br>${descriptor}`;
             } else {
                 descriptor = "pasted text";
-                noPeersMessage = `Open PairDrop on other devices to send<br>${descriptor}`;
+                noPeersMessage = `Open Drop - Doubtly on other devices to send<br>${descriptor}`;
             }
 
             this.$xInstructions.querySelector('p').innerHTML = `<i>${descriptor}</i>`;
@@ -184,7 +184,7 @@ class PeersUI {
             this.$xInstructions.setAttribute('desktop', 'Click to send files or right click to send a message');
             this.$xInstructions.setAttribute('mobile', 'Tap to send files or long tap to send a message');
 
-            this.$xNoPeers.querySelector('h2').innerHTML = 'Open PairDrop on other devices to send files';
+            this.$xNoPeers.querySelector('h2').innerHTML = 'Open Drop - Doubtly on other devices to send files';
 
             this.$cancelPasteModeBtn.setAttribute('hidden', "");
 
@@ -430,7 +430,7 @@ class Dialog {
             document.activeElement.blur();
             window.blur();
         }
-        document.title = 'PairDrop';
+        document.title = 'Drop - Doubtly';
         document.changeFavicon("images/favicon-96x96.png");
     }
 
@@ -546,10 +546,10 @@ class ReceiveFileDialog extends ReceiveDialog {
 
         if (files.length === 1) {
             url = URL.createObjectURL(files[0])
-            title = `PairDrop - ${descriptor} Received`
+            title = `Drop - Doubtly - ${descriptor} Received`
             filenameDownload = files[0].name;
         } else {
-            title = `PairDrop - ${files.length} ${descriptor}s Received`
+            title = `Drop - Doubtly - ${files.length} ${descriptor}s Received`
             description += ` and ${files.length-1} other ${descriptor.toLowerCase()}`;
             if(files.length>2) description += "s";
 
@@ -580,7 +580,7 @@ class ReceiveFileDialog extends ReceiveDialog {
                 hours = hours.length < 2 ? "0" + hours : hours;
                 let minutes = now.getMinutes().toString();
                 minutes = minutes.length < 2 ? "0" + minutes : minutes;
-                filenameDownload = `PairDrop_files_${year+month+date}_${hours+minutes}.zip`;
+                filenameDownload = `Drop_files_${year+month+date}_${hours+minutes}.zip`;
             }
         }
 
@@ -603,7 +603,7 @@ class ReceiveFileDialog extends ReceiveDialog {
         }
 
         this.createPreviewElement(files[0]).finally(_ => {
-            document.title = `PairDrop - ${files.length} Files received`;
+            document.title = `Drop - ${files.length} Files received`;
             document.changeFavicon("images/favicon-96x96-notification.png");
             this.show();
             Events.fire('set-progress', {peerId: peerId, progress: 1, status: 'process'})
@@ -686,7 +686,7 @@ class ReceiveRequestDialog extends ReceiveDialog {
             this.$previewBox.appendChild(element)
         }
 
-        document.title = 'PairDrop - File Transfer Requested';
+        document.title = 'Drop - Doubtly - File Transfer Requested';
         document.changeFavicon("images/favicon-96x96-notification.png");
         this.show();
     }
@@ -1061,7 +1061,7 @@ class ReceiveTextDialog extends Dialog {
         } else {
             this.$text.textContent = text;
         }
-        document.title = 'PairDrop - Message Received';
+        document.title = 'Drop - Doubtly - Message Received';
         document.changeFavicon("images/favicon-96x96-notification.png");
         this.show();
     }
@@ -1600,25 +1600,7 @@ class PairDrop {
 
 const persistentStorage = new PersistentStorage();
 const pairDrop = new PairDrop();
-
-
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js')
-        .then(serviceWorker => {
-            console.log('Service Worker registered');
-            window.serviceWorker = serviceWorker
-        });
-}
-
-window.addEventListener('beforeinstallprompt', e => {
-    if (!window.matchMedia('(display-mode: minimal-ui)').matches) {
-        // only display install btn when installed
-        const btn = document.querySelector('#install')
-        btn.hidden = false;
-        btn.onclick = _ => e.prompt();
-    }
-    return e.preventDefault();
-});
+ 
 
 // Background Animation
 Events.on('load', () => {

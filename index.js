@@ -96,7 +96,7 @@ if (process.argv.includes('--localhost-only')) {
 const parser = require('ua-parser-js');
 const { uniqueNamesGenerator, animals, colors } = require('unique-names-generator');
 
-class PairDropServer {
+class DropServer {
 
     constructor() {
         const WebSocket = require('ws');
@@ -106,7 +106,7 @@ class PairDropServer {
         this._rooms = {};
         this._roomSecrets = {};
 
-        console.log('PairDrop is running on port', port);
+        console.log('Drop is running on port', port);
     }
 
     _onConnection(peer) {
@@ -612,4 +612,4 @@ Object.defineProperty(String.prototype, 'hashCode', {
     }
 });
 
-new PairDropServer();
+new DropServer();
